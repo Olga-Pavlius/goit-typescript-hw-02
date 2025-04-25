@@ -19,12 +19,11 @@
 //   "include": ["src"],
 //   "references": [{ "path": "./tsconfig.node.json" }]
 // }
-
 {
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext", "es2015"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext", "es2015"],  // додайте es2015
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": false,
@@ -32,7 +31,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "Node16", 
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
@@ -41,6 +40,3 @@
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
-
-
-  
