@@ -4,9 +4,9 @@ axios.defaults.baseURL = "https://api.unsplash.com/";
 
 export type UnsplashPhoto = {
   id: string;
-  description: string;
-  likes: string;
-  alt_description: string;
+  description: string | null;
+  alt_description: string | null;
+  likes: number;
   urls: {
     small: string;
     regular: string;
@@ -28,9 +28,9 @@ export type UnsplashResponse = {
 type Params = {
   query: string;
   client_id: string;
-  orientation: string;
-  per_page: number;
-  page: number;
+  orientation?: "portrait" | "landscape" | "squarish";
+  per_page?: number;
+  page?: number;
 };
 
 export const fetchFotoWithTopic = async (
@@ -44,7 +44,8 @@ export const fetchFotoWithTopic = async (
     per_page: 12,
     page,
   };
+
   const response = await axios.get("/search/photos", { params });
 
-  return response.data;
+  return response.data as UnsplashResponse;
 };

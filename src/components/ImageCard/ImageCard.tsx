@@ -1,20 +1,7 @@
-// export default function ImageCard({
-//     image: {
-//       alt_description,
-//       urls: { small },
-//     },
-//   }) {
-//     return (
-//       <>
-//         <img src={small} alt={alt_description} />
-//       </>
-//     );
-//   }
-
-import { Image } from "../ImageGallery/ImageGallery";
+import { UnsplashPhoto } from "../FetchFoto/FetchFoto";  
 
 type Props = {
-  image: Image;
+  image: UnsplashPhoto; 
 };
 
 export default function ImageCard({

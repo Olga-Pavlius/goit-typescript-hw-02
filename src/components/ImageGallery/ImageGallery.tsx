@@ -1,46 +1,20 @@
-// import ImageCard from "../ImageCard/ImageCard";
-// import css from "./ImageGallery.module.css";
-
-// export default function ImageGallery({ images, onClick }) {
-//   return (
-//     <>
-//       <ul className={css.list}>
-//         {images.map((image) => (
-//           <li className={css.li}key={image.id} onClick={() => onClick(image)}>
-//             <ImageCard image={image} />
-//           </li>
-//         ))}
-//       </ul>
-//     </>
-//   );
-// }
-
 import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
-
-export type Image = {
-  id: string;
-  alt_description: string;
-  urls: {
-    small: string;
-  };
-};
+import { UnsplashPhoto } from "../FetchFoto/FetchFoto";  // Імпортуємо UnsplashPhoto для типізації
 
 type Props = {
-  images: Image[];
-  onClick: (image: Image) => void;
+  images: UnsplashPhoto[]; // Типізуємо масив зображень
+  onClick: (image: UnsplashPhoto) => void; // Типізуємо onClick
 };
 
 export default function ImageGallery({ images, onClick }: Props) {
   return (
-    <>
-      <ul className={css.list}>
-        {images.map((image) => (
-          <li key={image.id} onClick={() => onClick(image)}>
-            <ImageCard image={image} />
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul className={css.list}>
+      {images.map((image) => (
+        <li key={image.id} onClick={() => onClick(image)}>
+          <ImageCard image={image} />
+        </li>
+      ))}
+    </ul>
   );
 }
