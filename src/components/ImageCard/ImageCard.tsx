@@ -1,3 +1,23 @@
+// import { UnsplashPhoto } from "../FetchFoto/FetchFoto";  
+
+// type Props = {
+//   image: UnsplashPhoto; 
+// };
+
+// export default function ImageCard({
+//   image: {
+//     alt_description,
+//     urls: { small },
+//   },
+// }: Props) {
+//   return (
+//     <>
+//       <img src={small} alt={alt_description} />
+//     </>
+//   );
+// }
+
+
 import { UnsplashPhoto } from "../FetchFoto/FetchFoto";  
 
 type Props = {
@@ -12,7 +32,10 @@ export default function ImageCard({
 }: Props) {
   return (
     <>
-      <img src={small} alt={alt_description} />
+      <img
+        src={small}
+        alt={alt_description || "Image description not available"}
+      />
     </>
   );
 }
