@@ -1,3 +1,27 @@
+// {
+//   "compilerOptions": {
+//     "target": "ESNext",
+//     "useDefineForClassFields": true,
+//     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "esModuleInterop": false,
+//     "allowSyntheticDefaultImports": true,
+//     "strict": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "module": "ESNext",
+//     "moduleResolution": "Node",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx"
+//   },
+//   "include": ["src"],
+//   "references": [{ "path": "./tsconfig.node.json" }]
+// }
+
+
+
 {
   "compilerOptions": {
     "target": "ESNext",
@@ -5,18 +29,16 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true, // <-- було false
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node", // <-- правильне значення
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src"]
 }
-
