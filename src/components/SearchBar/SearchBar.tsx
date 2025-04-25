@@ -1,5 +1,5 @@
 import toast, { Toaster } from "react-hot-toast";
-import css from "./Searchbar.module.css";
+import css from "./SearchBar.module.css";
 import { FormEvent } from "react";
 
 type Props = {
